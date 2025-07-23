@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+<section class="contact-section">
+  <h1>💌 Contact Us</h1>
+  <p>We'd love to hear from you!</p>
+
+  <form class="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="map-placeholder">
+    <p>📍 Location Map Coming Soon</p>
+  </div>
+</section>
+{% endblock %}

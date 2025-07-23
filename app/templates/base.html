@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoseOfCoffee</title>
+
+    <!-- ✅ Global Styles -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}?v=6"
+    />
+
+    <!-- ✅ Page-Specific Styles -->
+    {% if request.endpoint == 'main.index' %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index.css') }}?v=6"
+    />
+    {% elif request.endpoint == 'main.menu' %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/menu.css') }}?v=6"
+    />
+    {% elif request.endpoint == 'main.gallery' %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/gallery.css') }}?v=6"
+    />
+    {% elif request.endpoint == 'main.contact' %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/contact.css') }}?v=6"
+    />
+    {% endif %}
+
+    <!-- ✅ Favicon -->
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <!-- ✅ Navbar -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="{{ url_for('main.index') }}">☕ Dose of Coffee</a>
+      </div>
+      <div class="nav-links">
+        <a href="{{ url_for('main.index') }}">🥤 Home</a>
+        <a href="{{ url_for('main.menu') }}">🍓 Menu</a>
+        <a href="{{ url_for('main.gallery') }}">📸 Gallery</a>
+        <a href="{{ url_for('main.contact') }}">💌 Contact</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+
+    <!-- ✅ Mobile Dropdown -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="{{ url_for('main.index') }}">🥤 Home</a>
+      <a href="{{ url_for('main.menu') }}">🍓 Menu</a>
+      <a href="{{ url_for('main.gallery') }}">📸 Gallery</a>
+      <a href="{{ url_for('main.contact') }}">💌 Contact</a>
+    </div>
+
+    <!-- ✅ Main Content -->
+    <main>{% block content %}{% endblock %}</main>
+
+    <!-- ✅ Footer -->
+    <footer class="footer">
+      <p>Made with ☕ + ❤️ in Arizona</p>
+      <p>© 2025 Dose of Coffee</p>
+    </footer>
+
+    <!-- ✅ Inline JS for Hamburger -->
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

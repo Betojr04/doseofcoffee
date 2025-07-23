@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="animate-text">☕ Dose of Coffee</h1>
+      <p>Whimsical drinks made with love, color, and good vibes.</p>
+      <a href="{{ url_for('main.menu') }}" class="cta-button gradient-btn"
+        >View Our Menu 🍓</a
+      >
+    </div>
+  </div>
+</section>
+
+<!-- OUR FAVORITES -->
+<section class="favorites-section">
+  <h2>✨ Customer Favorites</h2>
+  <div class="favorites-grid">
+    <div class="drink-card">
+      <img
+        src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlfGVufDB8fDB8fHww"
+        alt="Strawberry Matcha"
+      />
+      <p>🍓 Strawberry Matcha</p>
+    </div>
+    <div class="drink-card">
+      <img
+        src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlfGVufDB8fDB8fHww"
+        alt="Rose Refresher"
+      />
+      <p>🌹 Rose Refresher</p>
+    </div>
+    <div class="drink-card">
+      <img
+        src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29mZmVlfGVufDB8fDB8fHww"
+        alt="Vanilla Cold Brew"
+      />
+      <p>🌰 Vanilla Cold Brew</p>
+    </div>
+  </div>
+</section>
+
+<!-- IG CTA SECTION -->
+<!-- INSTAGRAM CTA SECTION -->
+<section class="cta-section">
+  <h3>Follow the vibes on Instagram 📸</h3>
+  <div class="instagram-grid">
+    <img
+      src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500"
+      alt="IG Photo 1"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=500"
+      alt="IG Photo 2"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=500"
+      alt="IG Photo 3"
+    />
+    <img
+      src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500"
+      alt="IG Photo 4"
+    />
+  </div>
+  <a
+    href="https://instagram.com/YOUR_HANDLE"
+    target="_blank"
+    class="cta-button ig-btn"
+  >
+    <img
+      src="{{ url_for('static', filename='images/instagram-icon.svg') }}"
+      alt="Instagram Icon"
+      class="ig-icon"
+    />
+    Follow Us on Instagram
+  </a>
+</section>
+
+{% endblock %}

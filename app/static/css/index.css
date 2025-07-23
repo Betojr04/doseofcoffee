@@ -1,0 +1,207 @@
+/* ============================
+   🎉 HERO SECTION
+============================ */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1521401292936-0a2129a30b1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNvZmZlZXxlbnwwfHwwfHx8MA%3D%3D") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(253, 248, 242, 0.8), rgba(255, 231, 181, 0.7));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: var(--choco);
+    margin-bottom: 1rem;
+    animation: fadeInDown 1.2s ease;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button Gradient */
+.gradient-btn {
+    background: linear-gradient(45deg, var(--pink), var(--matcha));
+    color: white;
+    padding: 0.9rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.gradient-btn:hover {
+    background: linear-gradient(45deg, var(--matcha), var(--pink));
+    transform: scale(1.08);
+}
+
+/* ============================
+   🧋 FAVORITES SECTION
+============================ */
+.favorites-section {
+    padding: 4rem 1.5rem 2rem;
+    text-align: center;
+    background: var(--white);
+    position: relative;
+}
+
+.favorites-section h2 {
+    font-size: 2rem;
+    color: var(--choco);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.drink-card {
+    background: var(--cream);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drink-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.drink-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.drink-card p {
+    padding: 1rem;
+    font-weight: 500;
+    color: var(--choco);
+}
+
+/* ============================
+   📸 Instagram CTA
+============================ */
+.cta-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background: var(--accent);
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    color: var(--choco);
+    margin-bottom: 1.5rem;
+}
+
+/* Instagram Grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.instagram-grid img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.instagram-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* IG Button */
+.ig-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: white;
+    padding: 0.9rem 1.5rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.ig-btn:hover {
+    transform: scale(1.05);
+}
+
+.ig-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Responsive for Larger Screens */
+@media (min-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+    }
+
+    .cta-section h3 {
+        font-size: 2rem;
+    }
+}
+
+/* ============================
+   🖥️ RESPONSIVE
+============================ */
+@media (min-width: 768px) {
+    .hero-text h1 {
+        font-size: 3.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1.4rem;
+    }
+
+    .favorites-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
